@@ -3,6 +3,7 @@
   "hostRequirements": {
     "cpus": 4
   },
+  "forwardPorts": [8000],
   "waitFor": "onCreateCommand",
   "updateContentCommand": "python3 -m pip install -r requirements.txt",
   "postCreateCommand": "",

@@ -1,0 +1,10 @@
+---
+id: "database-nonsense-poll"
+question: "Click the statements you believe are correct about databases:"
+options:
+  - "A database is like a digital filing cabinet—but it doesn't lose your stuff."
+  - "A library is a database. A single book also is a database."
+  - "Excel spreadsheet is one of the most powerful type of database in the world."
+  - "Your phone contacts list is basically a mini-database."
+  - "Databases only store public information, while apps keep secrets on your computer's clipboard."
+  - "If you accidentally delete everything in your SQL database, you will get a NoSQL database remaining."
