@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block content %}
+    <h2>{{ question.question }}</h2>
+    <form action="/vote" method="post">
+        <ul>
+            {% for option in question.options %}
+            <div class="option-box">
+              <li>
+                  <label><input type="checkbox" name="statements" value="{{ option }}"> 
+                    <span class="checkbox">
+                      {{ option }}
+                    </span>
+                  </label>
+              </li>
+            </div>
+            {% endfor %}
+        </ul>
+        <button type="submit">Submit Vote</button>
+    </form>
+    <img src="qr.png" alt="QR Code to Poll" style="margin-top: 2rem; max-width: 100%;">
+{% endblock %}
