@@ -28,7 +28,7 @@ class preflight_class():
             question = yaml.safe_load(file)
         return question
     def _in_codespace(self):
-        return os.getenv("CODESPACE_NAME", False) == 'true'
+        return os.getenv("CODESPACES", False) == 'true'
     def get_mongo_uri(self):
         # ask user to input MongoDB URI, with hidden input
         self.mongo_uri = getpass.getpass("Please enter your MongoDB URI: ")
@@ -77,6 +77,7 @@ class preflight_class():
         output.seek(0)
         
         ascii_qr = output.read()
+        print(f"Service url: {self.url}")
         print("Scan this QR code to access the poll:")
         print("")
         print(ascii_qr)
