@@ -3,6 +3,8 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+# QR code
+poll_qr_code.png
 # C extensions
 *.so
 
