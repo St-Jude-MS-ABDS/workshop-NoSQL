@@ -56,4 +56,15 @@ Here is a breakdown of the course design:
 
 # Lecturer's Notes
 
-This section is for lecturers to remind themselves of the key points to cover during the mock session.
+This section is for lecturers to remind themselves of what to do during the mock session.
+
+## Before going to the classroom
+Ensure the following are ready:
+- [ ] USB type-c hub with HDMI output
+- [ ] Fully charged laptop, or with power adapter
+- [ ] A **live** mongodb instance on atlas. Save the connection string in any way. I will call alias `demodburi` in my terminal and it comes to my clipboard
+- [ ] Mongodb network allow `0.0.0.0/0`
+
+## In the classroom
+- [ ] Connect the laptop to the projector using the USB type-c hub.
+- [ ] Open the [github repo](https://github.com/St-Jude-MS-ABDS/workshop-NoSQL), open the main branch codespace, put the **tab ONLY** in a new virtual desktop.
