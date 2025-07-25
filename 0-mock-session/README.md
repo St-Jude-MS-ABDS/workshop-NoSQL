@@ -52,4 +52,8 @@ Here is a breakdown of the course design:
    
   
 
-[^poll]: We build a quick poll hosted on github codespace to collect responses, and use it as an example of a NoSQL application.
+[^poll]: We build a quick poll hosted on github codespace to collect responses, and use it as an example of a NoSQL application. The lecturers will open [github repo](https://github.com/St-Jude-MS-ABDS/workshop-NoSQL) and run the main branch codespace. Open the codespace with the vscode webeditor, and run `cd 0-mock-session/poll && ./run.sh` to start the poll. The url and QR code will be displayed in the terminal. Participants can scan the QR code or open the URL to access the poll. 
+
+# Lecturer's Notes
+
+This section is for lecturers to remind themselves of the key points to cover during the mock session.

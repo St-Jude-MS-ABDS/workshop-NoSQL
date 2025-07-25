@@ -131,36 +131,6 @@ classDiagram
 
 the relational database are normalized
 
-# Course Mock Session Preparation
-
-## Time and Place
-The course mock up will be conducted on Tuesday, July 29, 9AM - 10AM in the ABDS classroom (ARC MP163). 
-
-## 
-The mock session reviewers will pay attention to the following areas:
-- Content & Objectives Alignment
-  - Lecture objectives clear and stated?
-  - Content aligned with objectives?
-- Structure & Flow
-  - Logical progression and appropriate pacing?
-- Engagement & Delivery
-  - Engaging and clear?
-  - Are there opportunities for interaction?
-  - Do you appear prepared and confident?
-- Visuals & Materials
-  - Are slides clear, readable, and aligned with the spoken content?
-  - Do visuals support learning without overwhelming?
-- Active Learning Integration
-  - Are active learning strategies (polls, think-pair-share, discussion) effectively integrated?
-
-## Session Format
-Session will be 1 hour long
-| Time | Activity |
-| ---- | -------- |
-| 5 min | Setup and technology check |
-| 40 min | Your mock lecture delivery |
-| 10 min | Feedback discussion |
-| 5 min | Wrap-up and next steps |
 
 # Reference
 - Next Generation Databases: NoSQL, NewSQL, and Big Data. Guy Harrison, 2015

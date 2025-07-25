@@ -7,7 +7,8 @@ __pycache__/
 poll_qr_code.png
 # C extensions
 *.so
-
+# vscode
+.vscode/
 # Distribution / packaging
 .Python
 build/

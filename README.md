@@ -20,6 +20,7 @@
 
 This two-day intensive course offers a specialized exploration of NoSQL databases, emphasizing their role in bioinformatics and data science. Participants will investigate key architectures and use cases of NoSQL systems—including document stores (MongoDB/JSON) and graph databases—to manage and analyze complex biological datasets, such as genomic sequences, pangenomic structures, and molecular interaction networks.
 
+
 ## Run with Github Codespace
 
 Github Codespaces provides a cloud-based environment that is consistent, reproducible, and easy to use for audiences. 
