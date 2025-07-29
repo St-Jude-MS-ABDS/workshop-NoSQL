@@ -25,11 +25,11 @@ class preflight_class():
     def __init__(self):
         self.url = None
         self.mongo_uri = None
-    def _get_question(self):
+    def _get_questions(self):
         # Load the question from the YAML file
         with open("question.yaml", "r") as file:
-            question = yaml.safe_load(file)
-        return question
+            questions = yaml.safe_load_all(file)
+        return questions
     def _in_codespace(self):
         return os.getenv("CODESPACES", False) == 'true'
     def get_mongo_uri(self):
@@ -40,8 +40,9 @@ class preflight_class():
         try:
             _client = MongoClient(self.mongo_uri)
             _client.admin.command('ping')
-            question = self._get_question()
-            _client[db_name][collection_name].replace_one({"id": question["id"]}, question, upsert=True)
+            questions = self._get_questions()
+            for question in questions:
+                _client[db_name][collection_name].replace_one({"id": question["id"]}, question, upsert=True)
             _client.close()
             print("MongoDB is connected successfully.")
         except Exception as e:
