@@ -4,10 +4,10 @@ question: "Click the statements you believe are correct about databases:"
 anonymous: true
 allow_multiple: true
 options:
-  - "Database is the base of the data, so all data is stored in the database."
-  - "A library is a database. A single book also is a database."
+  - "Everytime you scan your badge to enter the office, a database query is runned somewhere."
   - "Excel spreadsheet is one of the most powerful type of database in the world."
-  - "Your phone contacts list is basically a mini-database."
+  - "You can process a dataset without using a database."
+  - "Your phone contacts list is a database."
   - "If you accidentally delete everything in your SQL database, you will get a NoSQL database remaining."
 
 ---
