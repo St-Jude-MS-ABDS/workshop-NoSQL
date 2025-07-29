@@ -3,10 +3,6 @@
   - [A brief history of database](#a-brief-history-of-database)
     - [pre-relational database](#pre-relational-database)
     - [Relational Era](#relational-era)
-- [Course Mock Session Preparation](#course-mock-session-preparation)
-  - [Time and Place](#time-and-place)
-  - [](#)
-  - [Session Format](#session-format)
 - [Reference](#reference)
 
 
@@ -27,14 +23,13 @@ The evolution of databases has been driven by the application demand and the sto
 
 ```mermaid
 timeline
-    title Database Innovations Driven by Storage Eras
-
+    title Database Innovations
     section Pre-relational (~1950s-1960s)
         Magnetic Disk : 1968 Hierarchical model (IBM IMS)
                : 1969 Network model (CODASYL).
 
     section Relational (~1970s-Now)
-        Codd's Relational Model : 1974 IBM System R 
+        Codd's Relational Model & HDD : 1974 IBM System R 
         : 1978 Oracle
         : 1980 Ingres
         : 1986 official SQL standard
@@ -42,7 +37,7 @@ timeline
         : 1995 MySQL
 
     section Next Generation (~Late 2000s-Now)
-        Object Programming & Cloud : 2005 MapReduce
+        Object Programming & Cloud & SSDs
         : 2007 Neo4j
         : 2009 MongoDB
 ```
