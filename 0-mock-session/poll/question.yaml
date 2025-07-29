@@ -4,7 +4,7 @@ question: "Click the statements you believe are correct about databases:"
 anonymous: true
 allow_multiple: true
 options:
-  - "Everytime you scan your badge to enter the office, a database query is runned somewhere."
+  - "Everytime you scan your badge to enter the office, a database query runs somewhere."
   - "Excel spreadsheet is one of the most powerful type of database in the world."
   - "You can process a dataset without using a database."
   - "Your phone contacts list is a database."
