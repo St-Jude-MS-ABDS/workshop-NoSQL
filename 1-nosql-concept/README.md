@@ -37,7 +37,7 @@ timeline
         : 1995 MySQL
 
     section Next Generation (~Late 2000s-Now)
-        Object Programming & Cloud & SSDs : 2005 MapReduce
+        Object Programming & Cloud & SSDs
         : 2007 Neo4j
         : 2009 MongoDB
 ```
