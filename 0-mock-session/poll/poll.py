@@ -28,7 +28,8 @@ class preflight_class():
     def _get_questions(self):
         # Load the question from the YAML file
         with open("question.yaml", "r") as file:
-            questions = yaml.safe_load_all(file)
+            questions_generator = yaml.safe_load_all(file)
+            questions = list(questions_generator)
         return questions
     def _in_codespace(self):
         return os.getenv("CODESPACES", False) == 'true'
@@ -41,6 +42,7 @@ class preflight_class():
             _client = MongoClient(self.mongo_uri)
             _client.admin.command('ping')
             questions = self._get_questions()
+            print(questions)
             for question in questions:
                 _client[db_name][collection_name].replace_one({"id": question["id"]}, question, upsert=True)
             _client.close()
