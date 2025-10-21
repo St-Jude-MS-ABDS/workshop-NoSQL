@@ -1,12 +1,10 @@
+# The course will be given in PowerPoint
 # Introduction to NoSQL: Concepts
+- [The course will be given in PowerPoint](#the-course-will-be-given-in-powerpoint)
 - [Introduction to NoSQL: Concepts](#introduction-to-nosql-concepts)
   - [A brief history of database](#a-brief-history-of-database)
     - [pre-relational database](#pre-relational-database)
     - [Relational Era](#relational-era)
-- [Course Mock Session Preparation](#course-mock-session-preparation)
-  - [Time and Place](#time-and-place)
-  - [](#)
-  - [Session Format](#session-format)
 - [Reference](#reference)
 
 
@@ -130,6 +128,7 @@ classDiagram
 ```
 
 the relational database are normalized
+
 
 
 # Reference
