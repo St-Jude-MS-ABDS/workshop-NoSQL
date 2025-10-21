@@ -1,10 +1,24 @@
 ---
 id: "database-nonsense-poll"
 question: "Click the statements you believe are correct about databases:"
+anonymous: true
+allow_multiple: true
 options:
-  - "A database is like a digital filing cabinet—but it doesn't lose your stuff."
+  - "Database is the base of the data, so all data is stored in the database."
   - "A library is a database. A single book also is a database."
   - "Excel spreadsheet is one of the most powerful type of database in the world."
   - "Your phone contacts list is basically a mini-database."
-  - "Databases only store public information, while apps keep secrets on your computer's clipboard."
   - "If you accidentally delete everything in your SQL database, you will get a NoSQL database remaining."
+
+---
+id: "after-course-poll1"
+question: "Which of the following is a key advantage of document databases?"
+anonymous: false
+allow_multiple: false
+options:
+  - "They enforce a strict schema for data."
+  - "They allow for flexible and dynamic data structures."
+  - "They are optimized for complex joins between tables."
+  - "They require a fixed data model before storing any data."
+evaluation:
+  answer: "They allow for flexible and dynamic data structures."

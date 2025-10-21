@@ -7,8 +7,11 @@ import getpass
 import qrcode
 import os
 from io import StringIO, BytesIO
-from fastapi.responses import FileResponse
 from fastapi.responses import StreamingResponse
+from fastapi import FastAPI, Form, Request
+from fastapi.responses import HTMLResponse, RedirectResponse
+from fastapi.staticfiles import StaticFiles
+from fastapi.templating import Jinja2Templates
 
 # Check if in the codespace environment
 # https://docs.github.com/en/codespaces/developing-in-a-codespace/forwarding-ports-in-your-codespace?tool=webui
@@ -22,11 +25,12 @@ class preflight_class():
     def __init__(self):
         self.url = None
         self.mongo_uri = None
-    def _get_question(self):
+    def _get_questions(self):
         # Load the question from the YAML file
         with open("question.yaml", "r") as file:
-            question = yaml.safe_load(file)
-        return question
+            questions_generator = yaml.safe_load_all(file)
+            questions = list(questions_generator)
+        return questions
     def _in_codespace(self):
         return os.getenv("CODESPACES", False) == 'true'
     def get_mongo_uri(self):
@@ -37,8 +41,10 @@ class preflight_class():
         try:
             _client = MongoClient(self.mongo_uri)
             _client.admin.command('ping')
-            question = self._get_question()
-            _client[db_name][collection_name].replace_one({"id": question["id"]}, question, upsert=True)
+            questions = self._get_questions()
+            print(questions)
+            for question in questions:
+                _client[db_name][collection_name].replace_one({"id": question["id"]}, question, upsert=True)
             _client.close()
             print("MongoDB is connected successfully.")
         except Exception as e:
@@ -92,6 +98,8 @@ class preflight_class():
 preflight = preflight_class()
 preflight.check()
 app = FastAPI()
+app.mount("/static", StaticFiles(directory="static"), name="static")
+templates = Jinja2Templates(directory="templates")
 
 # Allow frontend access from different origins (optional)
 app.add_middleware(
@@ -121,62 +129,12 @@ async def get_qr_code():
     return {"error": "QR code not generated yet."}
 
 @app.get("/", response_class=HTMLResponse)
-async def poll_form():
+async def poll_form(request: Request):
     question = collection.find_one({"id": question_id})
-    return f"""
-    <html>
-        <head>
-            <title>Database Poll</title>
-            <style>
-                body {{
-                    font-family: 'Segoe UI', sans-serif;
-                    max-width: 600px;
-                    margin: 2em auto;
-                    padding: 1em;
-                    background: #f9f9f9;
-                    color: #333;
-                    border-radius: 8px;
-                    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-                }}
-                h2 {{
-                    color: #2c3e50;
-                }}
-                form ul {{
-                    list-style-type: none;
-                    padding: 0;
-                }}
-                form li {{
-                    margin: 10px 0;
-                }}
-                button {{
-                    background-color: #3498db;
-                    color: white;
-                    border: none;
-                    padding: 10px 20px;
-                    font-size: 1em;
-                    border-radius: 5px;
-                    cursor: pointer;
-                }}
-                button:hover {{
-                    background-color: #2980b9;
-                }}
-            </style>
-        </head>
-        <body>
-            <h2>{question['question']}</h2>
-            <form action="/vote" method="post">
-                <ul>
-                    {"".join(f'<li><label><input type="checkbox" name="statements" value="{option}"> {option}</label></li>' for option in question['options'])}
-                </ul>
-                <button type="submit">Submit Vote</button>
-            </form>
-            <img src="qr.png" alt="QR Code to Poll" style="margin-top: 20px; max-width: 360px; height: auto;">
-        </body>
-    </html>
-    """
+    return templates.TemplateResponse("poll.html", {"request": request, "title": "Database Poll", "question": question})
 
 @app.get("/results", response_class=HTMLResponse)
-async def show_results():
+async def show_results(request: Request):
     results = collection.aggregate([
         {"$match": {"id": question_id}},
         {"$unwind": "$votes"},
@@ -184,44 +142,4 @@ async def show_results():
         {"$group": {"_id": "$votes", "count": {"$sum": 1}}},
         {"$sort": {"count": -1}}
     ])
-    html = """
-    <html>
-        <head>
-            <title>Poll Results</title>
-            <style>
-                body {{
-                    font-family: 'Segoe UI', sans-serif;
-                    max-width: 600px;
-                    margin: 2em auto;
-                    padding: 1em;
-                    background: #f9f9f9;
-                    color: #333;
-                    border-radius: 8px;
-                    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-                }}
-                h2 {{
-                    color: #27ae60;
-                }}
-                li {{
-                    margin: 8px 0;
-                }}
-                a {{
-                    display: inline-block;
-                    margin-top: 1em;
-                    text-decoration: none;
-                    color: #3498db;
-                    font-weight: bold;
-                }}
-                a:hover {{
-                    text-decoration: underline;
-                }}
-            </style>
-        </head>
-        <body>
-            <h2>Poll Results</h2>
-            <ul>
-    """
-    for result in results:
-        html += f"<li>{result['_id']}: {result['count']} votes</li>"
-    html += "</ul><a href='/'>← Back to poll</a></body></html>"
-    return html
+    return templates.TemplateResponse("results.html", {"request": request, "title": "Poll Results", "results": list(results)})
