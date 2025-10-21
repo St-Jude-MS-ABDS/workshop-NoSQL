@@ -5,6 +5,7 @@ __pycache__/
 references
 3-graphdb-concept/
 4-neo4j-workshop/
+neo4j_setup/
 
 # QR code
 poll_qr_code.png
