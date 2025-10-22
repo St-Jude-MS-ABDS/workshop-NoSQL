@@ -4,6 +4,7 @@ __pycache__/
 *$py.class
 references
 neo4j_setup/
+4-neo4j-workshop/
 
 # QR code
 poll_qr_code.png
