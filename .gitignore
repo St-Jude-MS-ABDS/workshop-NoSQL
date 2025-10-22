@@ -3,8 +3,6 @@ __pycache__/
 *.py[cod]
 *$py.class
 references
-3-graphdb-concept/
-4-neo4j-workshop/
 neo4j_setup/
 
 # QR code

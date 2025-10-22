@@ -13,3 +13,4 @@ vcfpy==0.14.2
 dnspython==2.6.1
 pyfaidx==0.9.0
 python-dotenv==1.1.1
+neo4j_viz==0.2.5
