@@ -1,0 +1,66 @@
+genome_id,name,kegg_id,taxid,species_taxid,assembly,n_protein_genes,n_kos
+aae,Aquifex aeolicus,T00013,224324,63363,GCA_000008625.1,1553,964
+amu,Akkermansia muciniphila,T00736,349741,239935,GCA_000020225.1,2138,970
+ana,Nostoc sp. PCC 7120,T00069,103690,103690,GCA_000009705.1,6132,1566
+atu,Agrobacterium fabrum,T00070,176299,1176649,GCA_000092025.1,5355,2065
+ban,Bacillus anthracis Ames,T00129,198094,1392,GCA_000007845.1,5330,1853
+bbu,Borreliella burgdorferi B31,T00012,224326,139,GCA_000008685.2,1339,480
+bja,Bradyrhizobium diazoefficiens USDA 110,T00109,224911,1355477,GCA_000011365.1,8317,2183
+bll,Bifidobacterium longum subsp. longum JDM301,T01240,759350,216816,GCA_000092325.1,1959,939
+bpe,Bordetella pertussis Tohama I,T00139,257313,520,GCA_000195715.1,3447,1660
+bsu,Bacillus subtilis subsp. subtilis 168,T00010,224308,1423,GCF_000009045.1,4174,2133
+bth,Bacteroides thetaiotaomicron VPI-5482,T00122,226186,818,GCA_000011065.1,4825,1207
+buc,Buchnera aphidicola APS (Acyrthosiphon pisum),T00036,107806,9,GCA_000009605.1,574,571
+cac,Clostridium acetobutylicum ATCC 824,T00056,272562,1488,GCA_000008765.1,3848,1452
+ccr,Caulobacter vibrioides CB15,T00049,190650,155892,GCA_000006905.1,3737,1599
+cdf,Clostridioides difficile 630,T00487,272563,1496,GCA_000009205.2,3809,1398
+cgl,Corynebacterium glutamicum ATCC 13032 (Kyowa Hakko),T00102,196627,1718,GCA_000011325.1,3099,1283
+cje,Campylobacter jejuni subsp. jejuni NCTC 11168 = ATCC 700819,T00026,192222,197,GCF_000009085.1,1572,1054
+ctr,Chlamydia trachomatis D/UW-3/CX,T00017,272561,813,GCF_000008725.1,887,564
+dra,Deinococcus radiodurans,T00025,243230,1299,GCA_000008565.1,3101,1219
+dvu,Nitratidesulfovibrio vulgaris Hildenborough,T00171,882,881,GCA_000195755.1,3531,1372
+eco,Escherichia coli K-12 MG1655,T00007,511145,562,GCF_000005845.2,4288,3047
+ecs,Escherichia coli O157:H7 Sakai (EHEC),T00048,386585,562,GCF_000008865.2,5155,3033
+efa,Enterococcus faecalis V583,T00123,226185,1351,GCA_000007785.1,3265,1288
+fnu,Fusobacterium nucleatum subsp. nucleatum ATCC 25586,T00077,190304,851,GCA_000007325.1,2067,971
+gsu,Geobacter sulfurreducens PCA,T00155,243231,35554,GCA_000007985.2,3432,1422
+hal,Halobacterium salinarum NRC-1,T00038,64091,2242,GCA_000006805.1,2605,975
+hin,Haemophilus influenzae Rd KW20 (serotype d),T00001,71421,727,GCA_000027305.1,1709,1288
+hpy,Helicobacter pylori 26695,T00008,85962,210,GCA_000008525.1,1566,912
+kpn,Klebsiella pneumoniae subsp. pneumoniae MGH 78578 (serotype K52),T00566,272620,573,GCA_000016305.1,5185,2939
+lil,Leptospira interrogans serovar Lai 56601,T00098,189518,173,GCA_000092565.1,3706,1109
+lmo,Listeria monocytogenes EGD-e (serotype 1/2a),T00066,169963,1639,GCF_000196035.1,2867,1433
+lpl,Lactiplantibacillus plantarum WCFS1,T00115,220668,1590,GCA_000203855.3,3108,1240
+lpn,Legionella pneumophila subsp. pneumophila Philadelphia 1 (serogroup 1),T00199,272624,446,GCA_000008485.1,2942,1382
+mac,Methanosarcina acetivorans,T00080,188937,2214,GCA_000007345.1,4540,1204
+mge,Mycoplasmoides genitalium G37,T00002,243273,2097,GCA_000027325.1,476,362
+mja,Methanocaldococcus jannaschii,T00003,243232,2190,GCA_000091665.1,1770,959
+mle,Mycobacterium leprae TN,T00047,272631,1769,GCA_000195855.1,1605,949
+mpn,Mycoplasmoides pneumoniae M129,T00006,272634,2104,GCA_000027345.1,688,377
+mtu,Mycobacterium tuberculosis H37Rv,T00015,83332,1773,GCF_000195955.2,3906,1602
+mxa,Myxococcus xanthus,T00366,246197,34,GCA_000012685.1,7331,1762
+nme,Neisseria meningitidis MC58 (serogroup B),T00027,122586,487,GCA_000008805.1,2063,1154
+nmr,Nitrosopumilus maritimus,T00626,436308,338192,GCA_000018465.1,1795,763
+pae,Pseudomonas aeruginosa PAO1,T00035,208964,287,GCF_000006765.1,5572,2655
+pfu,Pyrococcus furiosus DSM 3638,T00075,186497,2261,GCA_000007305.1,2065,970
+pgi,Porphyromonas gingivalis W83,T00145,242619,837,GCA_000007585.1,1909,884
+pma,Prochlorococcus marinus subsp. marinus CCMP1375,T00137,167539,1219,GCA_000007925.1,1882,971
+ppu,Pseudomonas putida KT2440,T00114,160488,303,GCA_000007565.2,5564,2358
+rpr,Rickettsia prowazekii Madrid E,T00018,272947,782,GCA_000195735.1,834,601
+sai,Sulfolobus acidocaldarius DSM 639,T00251,330779,2285,GCA_000012285.1,2223,873
+sau,Staphylococcus aureus subsp. aureus N315 (MRSA/VSSA),T00051,158879,1280,GCA_000009645.1,2624,1434
+sco,Streptomyces coelicolor,T00085,100226,1902,GCA_000203835.1,8154,1890
+sfl,Shigella flexneri 301 (serotype 2a),T00097,198214,623,GCF_000006925.2,4313,2644
+sme,Sinorhizobium meliloti 1021,T00058,266834,382,GCA_000006965.1,6233,2194
+spn,Streptococcus pneumoniae TIGR4 (virulent serotype 4),T00057,170187,1313,GCA_000006885.1,2125,1091
+spy,Streptococcus pyogenes M1 GAS (serotype M1),T00050,160490,1314,GCA_000006785.2,1693,1010
+stm,Salmonella enterica subsp. enterica serovar Typhimurium LT2,T00065,99287,28901,GCF_000006945.2,4554,2939
+syf,Synechococcus elongatus PCC 7942 = FACHB-805,T00300,1140,32046,GCA_000012525.1,2661,1273
+syn,Synechocystis sp. PCC 6803,T00004,1148,1148,GCA_000009725.1,3564,1377
+tac,Thermoplasma acidophilum,T00037,273075,2303,GCA_000195915.1,1478,732
+tma,Thermotoga maritima MSB8,T00022,243274,2336,GCA_000008545.1,1846,1042
+tpa,Treponema pallidum subsp. pallidum Nichols,T00016,243276,160,GCA_000008605.1,1031,570
+tth,Thermus thermophilus HB27,T00170,262724,274,GCA_000008125.1,2210,1151
+vch,Vibrio cholerae O1 El Tor N16961,T00034,243277,666,GCA_000006745.1,3828,2102
+wol,Wolbachia endosymbiont of Drosophila melanogaster,T00160,163164,163164,GCA_000008025.1,1195,595
+ype,Yersinia pestis CO92 (biovar Orientalis),T00063,214092,632,GCA_000009065.1,4083,2386

@@ -1,0 +1,6 @@
+{"_id": "SAMPLE_A", "sex": "F", "population": "EUR", "mean_coverage_x": 34.2, "platform": "Illumina NovaSeq 6000", "vcf_file": "sample.vcf", "synthetic": true}
+{"_id": "SAMPLE_B", "sex": "M", "population": "AFR", "mean_coverage_x": 29.8, "platform": "Illumina NovaSeq 6000", "vcf_file": "sample.vcf", "synthetic": true}
+{"_id": "SAMPLE_C", "sex": "F", "population": "EAS", "mean_coverage_x": 31.5, "platform": "Illumina NovaSeq 6000", "vcf_file": "sample.vcf", "synthetic": true}
+{"_id": "SAMPLE_D", "sex": "M", "population": "EUR", "mean_coverage_x": 38.0, "platform": "Illumina NovaSeq 6000", "vcf_file": "assignment.vcf", "synthetic": true}
+{"_id": "SAMPLE_E", "sex": "F", "population": "AMR", "mean_coverage_x": 27.4, "platform": "Illumina NovaSeq 6000", "vcf_file": "assignment.vcf", "synthetic": true}
+{"_id": "SAMPLE_F", "sex": "M", "population": "SAS", "mean_coverage_x": 33.1, "platform": "Illumina NovaSeq 6000", "vcf_file": "assignment.vcf", "synthetic": true}

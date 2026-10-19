@@ -1,0 +1,98 @@
+# =============================================================================
+#  NoSQL workshop: local MongoDB + Neo4j in Docker
+# =============================================================================
+#  One command starts everything you need for the hands-on sessions:
+#
+#      cd docker
+#      docker compose up -d
+#
+#  What you get                       | URL / address
+#  -----------------------------------|-----------------------------------------
+#  MongoDB 7   (document database)    | mongodb://localhost:27017
+#  Neo4j 5     (graph database)       | Browser UI : http://localhost:7474
+#                                     | Bolt (used by Python): bolt://localhost:7687
+#
+#  Credentials (workshop only!  never reuse these on a real server)
+#  -----------------------------------------------------------------
+#  MongoDB admin   : admin   / workshop_admin    (can do everything)
+#  MongoDB student : student / student_password  (created by mongo-init/, restricted: see RBAC part
+#                                                 of the MongoDB workbook)
+#  Neo4j           : neo4j   / workshop_neo4j
+#
+#  Handy commands (run them inside the docker/ folder)
+#  ---------------------------------------------------
+#  docker compose ps                  show what is running (look for "healthy")
+#  docker compose logs -f neo4j       follow the log of one service (Ctrl+C to leave)
+#  docker compose stop                pause the databases, data is kept
+#  docker compose down                remove the containers, data is kept (volumes survive)
+#  docker compose down -v             remove containers AND all data -> a clean restart
+#
+#  Is a port already taken on your laptop (e.g. you already run MongoDB)?
+#  Change it without touching this file, e.g. on macOS / Linux:
+#      MONGO_PORT=27018 docker compose up -d
+#  and then set the same port in the notebook (see the "Connect" cell).
+# =============================================================================
+
+name: nosql-workshop        # prefix for container / volume names -> no clash with other projects
+
+services:
+  # ---------------------------------------------------------------------------
+  # MongoDB: document database (lectures 24 & 25)
+  # ---------------------------------------------------------------------------
+  mongodb:
+    image: mongo:7.0
+    container_name: nosql-workshop-mongodb
+    restart: unless-stopped
+    environment:
+      # The official image creates this *root* user the first time the (empty)
+      # data volume is initialised. It plays the role of the "administrator".
+      MONGO_INITDB_ROOT_USERNAME: admin
+      MONGO_INITDB_ROOT_PASSWORD: workshop_admin
+    ports:
+      # 127.0.0.1 = reachable only from your own laptop, not from the network.
+      - "127.0.0.1:${MONGO_PORT:-27017}:27017"
+    volumes:
+      - mongodb_data:/data/db                    # the database files (survive restarts)
+      # Every *.js / *.sh file in this folder runs ONCE, when the data volume is created.
+      # We use it to create the restricted "student" user (RBAC demo).
+      - ./mongo-init:/docker-entrypoint-initdb.d:ro
+    healthcheck:
+      test: ["CMD", "mongosh", "--quiet", "--eval", "db.adminCommand('ping').ok"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+      start_period: 20s
+
+  # ---------------------------------------------------------------------------
+  # Neo4j: graph database (lectures 26 & 27)
+  # ---------------------------------------------------------------------------
+  neo4j:
+    image: neo4j:5.26-community      # 5.26 is a Long-Term-Support release
+    container_name: nosql-workshop-neo4j
+    restart: unless-stopped
+    environment:
+      NEO4J_AUTH: neo4j/workshop_neo4j               # <user>/<password>, password needs >= 8 characters
+      # Memory: small values are plenty for the workshop graph (~100k relationships).
+      # (In Neo4j settings a "_" is written "__" and a "." is written "_" in environment variables.)
+      NEO4J_server_directories_import: /workshop-data   # where LOAD CSV looks for  file:///...
+      NEO4J_server_memory_heap_initial__size: 512m
+      NEO4J_server_memory_heap_max__size: 1G
+      NEO4J_server_memory_pagecache_size: 512m
+    ports:
+      - "127.0.0.1:${NEO4J_HTTP_PORT:-7474}:7474"   # Neo4j Browser (web UI)
+      - "127.0.0.1:${NEO4J_BOLT_PORT:-7687}:7687"   # Bolt protocol (Python driver, cypher-shell)
+    volumes:
+      - neo4j_data:/data
+      # The workshop CSV files. Inside the container they appear in Neo4j's "import"
+      # folder, so Cypher can read them with   LOAD CSV FROM 'file:///genomes.csv'
+      - ../data/neo4j:/workshop-data:ro
+    healthcheck:
+      test: ["CMD-SHELL", "cypher-shell -u neo4j -p workshop_neo4j 'RETURN 1' || exit 1"]
+      interval: 10s
+      timeout: 10s
+      retries: 12
+      start_period: 30s
+
+volumes:
+  mongodb_data:
+  neo4j_data:

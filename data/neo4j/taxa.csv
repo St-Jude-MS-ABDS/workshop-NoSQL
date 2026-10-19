@@ -1,0 +1,271 @@
+taxid,name,rank,rank_level
+131567,cellular organisms,root,0
+2157,Archaea,domain,1
+2,Bacteria,domain,1
+201174,Actinomycetota,phylum,2
+200783,Aquificota,phylum,2
+1239,Bacillota,phylum,2
+976,Bacteroidota,phylum,2
+29547,Campylobacterota,phylum,2
+204428,Chlamydiota,phylum,2
+1117,Cyanobacteriota,phylum,2
+1297,Deinococcota,phylum,2
+32066,Fusobacteriota,phylum,2
+28890,Methanobacteriota,phylum,2
+544448,Mycoplasmatota,phylum,2
+2818505,Myxococcota,phylum,2
+651137,Nitrososphaerota,phylum,2
+1224,Pseudomonadota,phylum,2
+203691,Spirochaetota,phylum,2
+200940,Thermodesulfobacteriota,phylum,2
+2283796,Thermoplasmatota,phylum,2
+28889,Thermoproteota,phylum,2
+200918,Thermotogota,phylum,2
+74201,Verrucomicrobiota,phylum,2
+1760,Actinomycetes,class,3
+28211,Alphaproteobacteria,class,3
+187857,Aquificia,class,3
+91061,Bacilli,class,3
+200643,Bacteroidia,class,3
+28216,Betaproteobacteria,class,3
+204429,Chlamydiia,class,3
+186801,Clostridia,class,3
+3028117,Cyanophyceae,class,3
+188787,Deinococci,class,3
+3031449,Desulfovibrionia,class,3
+3031651,Desulfuromonadia,class,3
+3031852,Epsilonproteobacteria,class,3
+203490,Fusobacteriia,class,3
+1236,Gammaproteobacteria,class,3
+183963,Halobacteria,class,3
+3118682,Leptospiria,class,3
+183939,Methanococci,class,3
+224756,Methanomicrobia,class,3
+32015,Myxococcia,class,3
+1643678,Nitrososphaeria,class,3
+203692,Spirochaetia,class,3
+183968,Thermococci,class,3
+183967,Thermoplasmata,class,3
+183924,Thermoprotei,class,3
+188708,Thermotogae,class,3
+203494,Verrucomicrobiia,class,3
+32069,Aquificales,order,4
+171549,Bacteroidales,order,4
+85004,Bifidobacteriales,order,4
+80840,Burkholderiales,order,4
+213849,Campylobacterales,order,4
+1385,Caryophanales,order,4
+204458,Caulobacterales,order,4
+51291,Chlamydiales,order,4
+118964,Deinococcales,order,4
+213115,Desulfovibrionales,order,4
+91347,Enterobacterales,order,4
+186802,Eubacteriales,order,4
+203491,Fusobacteriales,order,4
+3031668,Geobacterales,order,4
+2235,Halobacteriales,order,4
+356,Hyphomicrobiales,order,4
+85011,Kitasatosporales,order,4
+186826,Lactobacillales,order,4
+118969,Legionellales,order,4
+1643688,Leptospirales,order,4
+2182,Methanococcales,order,4
+94695,Methanosarcinales,order,4
+85007,Mycobacteriales,order,4
+2790996,Mycoplasmoidales,order,4
+29,Myxococcales,order,4
+206351,Neisseriales,order,4
+31932,Nitrosopumilales,order,4
+1161,Nostocales,order,4
+135625,Pasteurellales,order,4
+3082720,Peptostreptococcales,order,4
+72274,Pseudomonadales,order,4
+766,Rickettsiales,order,4
+136,Spirochaetales,order,4
+2281,Sulfolobales,order,4
+1890424,Synechococcales,order,4
+68933,Thermales,order,4
+2258,Thermococcales,order,4
+2301,Thermoplasmatales,order,4
+2419,Thermotogales,order,4
+3120456,Treponematales,order,4
+48461,Verrucomicrobiales,order,4
+135623,Vibrionales,order,4
+1647988,Akkermansiaceae,family,5
+506,Alcaligenaceae,family,5
+942,Anaplasmataceae,family,5
+64898,Aquificaceae,family,5
+186817,Bacillaceae,family,5
+815,Bacteroidaceae,family,5
+31953,Bifidobacteriaceae,family,5
+1643685,Borreliaceae,family,5
+72294,Campylobacteraceae,family,5
+76892,Caulobacteraceae,family,5
+809,Chlamydiaceae,family,5
+31979,Clostridiaceae,family,5
+1653,Corynebacteriaceae,family,5
+183710,Deinococcaceae,family,5
+194924,Desulfovibrionaceae,family,5
+543,Enterobacteriaceae,family,5
+81852,Enterococcaceae,family,5
+1903409,Erwiniaceae,family,5
+203492,Fusobacteriaceae,family,5
+213422,Geobacteraceae,family,5
+2236,Halobacteriaceae,family,5
+72293,Helicobacteraceae,family,5
+33958,Lactobacillaceae,family,5
+444,Legionellaceae,family,5
+170,Leptospiraceae,family,5
+186820,Listeriaceae,family,5
+1890428,Merismopediaceae,family,5
+196117,Methanocaldococcaceae,family,5
+2206,Methanosarcinaceae,family,5
+1762,Mycobacteriaceae,family,5
+2790998,Mycoplasmoidaceae,family,5
+31,Myxococcaceae,family,5
+481,Neisseriaceae,family,5
+41294,Nitrobacteraceae,family,5
+338190,Nitrosopumilaceae,family,5
+1162,Nostocaceae,family,5
+712,Pasteurellaceae,family,5
+186804,Peptostreptococcaceae,family,5
+171551,Porphyromonadaceae,family,5
+2881426,Prochlorococcaceae,family,5
+135621,Pseudomonadaceae,family,5
+82115,Rhizobiaceae,family,5
+775,Rickettsiaceae,family,5
+90964,Staphylococcaceae,family,5
+1300,Streptococcaceae,family,5
+2062,Streptomycetaceae,family,5
+118883,Sulfolobaceae,family,5
+1890426,Synechococcaceae,family,5
+188786,Thermaceae,family,5
+2259,Thermococcaceae,family,5
+46659,Thermoplasmataceae,family,5
+188709,Thermotogaceae,family,5
+2845253,Treponemataceae,family,5
+641,Vibrionaceae,family,5
+1903411,Yersiniaceae,family,5
+357,Agrobacterium,genus,6
+239934,Akkermansia,genus,6
+2713,Aquifex,genus,6
+1386,Bacillus,genus,6
+816,Bacteroides,genus,6
+1678,Bifidobacterium,genus,6
+517,Bordetella,genus,6
+64895,Borreliella,genus,6
+374,Bradyrhizobium,genus,6
+32199,Buchnera,genus,6
+194,Campylobacter,genus,6
+75,Caulobacter,genus,6
+810,Chlamydia,genus,6
+1870884,Clostridioides,genus,6
+1485,Clostridium,genus,6
+1716,Corynebacterium,genus,6
+1298,Deinococcus,genus,6
+1350,Enterococcus,genus,6
+561,Escherichia,genus,6
+848,Fusobacterium,genus,6
+28231,Geobacter,genus,6
+724,Haemophilus,genus,6
+2239,Halobacterium,genus,6
+209,Helicobacter,genus,6
+570,Klebsiella,genus,6
+2767842,Lactiplantibacillus,genus,6
+445,Legionella,genus,6
+171,Leptospira,genus,6
+1637,Listeria,genus,6
+196118,Methanocaldococcus,genus,6
+2207,Methanosarcina,genus,6
+1763,Mycobacterium,genus,6
+2995234,Mycoplasmoides,genus,6
+32,Myxococcus,genus,6
+482,Neisseria,genus,6
+2802295,Nitratidesulfovibrio,genus,6
+338191,Nitrosopumilus,genus,6
+1177,Nostoc,genus,6
+836,Porphyromonas,genus,6
+1218,Prochlorococcus,genus,6
+286,Pseudomonas,genus,6
+2260,Pyrococcus,genus,6
+780,Rickettsia,genus,6
+590,Salmonella,genus,6
+620,Shigella,genus,6
+28105,Sinorhizobium,genus,6
+1279,Staphylococcus,genus,6
+1301,Streptococcus,genus,6
+1883,Streptomyces,genus,6
+2284,Sulfolobus,genus,6
+1129,Synechococcus,genus,6
+1142,Synechocystis,genus,6
+2302,Thermoplasma,genus,6
+2335,Thermotoga,genus,6
+270,Thermus,genus,6
+157,Treponema,genus,6
+662,Vibrio,genus,6
+953,Wolbachia,genus,6
+629,Yersinia,genus,6
+1176649,Agrobacterium fabrum,species,7
+239935,Akkermansia muciniphila,species,7
+63363,Aquifex aeolicus,species,7
+1392,Bacillus anthracis,species,7
+1423,Bacillus subtilis,species,7
+818,Bacteroides thetaiotaomicron,species,7
+216816,Bifidobacterium longum,species,7
+520,Bordetella pertussis,species,7
+139,Borreliella burgdorferi,species,7
+1355477,Bradyrhizobium diazoefficiens,species,7
+9,Buchnera aphidicola,species,7
+197,Campylobacter jejuni,species,7
+155892,Caulobacter vibrioides,species,7
+813,Chlamydia trachomatis,species,7
+1496,Clostridioides difficile,species,7
+1488,Clostridium acetobutylicum,species,7
+1718,Corynebacterium glutamicum,species,7
+1299,Deinococcus radiodurans,species,7
+1351,Enterococcus faecalis,species,7
+562,Escherichia coli,species,7
+851,Fusobacterium nucleatum,species,7
+35554,Geobacter sulfurreducens,species,7
+727,Haemophilus influenzae,species,7
+2242,Halobacterium salinarum,species,7
+210,Helicobacter pylori,species,7
+573,Klebsiella pneumoniae,species,7
+1590,Lactiplantibacillus plantarum,species,7
+446,Legionella pneumophila,species,7
+173,Leptospira interrogans,species,7
+1639,Listeria monocytogenes,species,7
+2190,Methanocaldococcus jannaschii,species,7
+2214,Methanosarcina acetivorans,species,7
+1769,Mycobacterium leprae,species,7
+1773,Mycobacterium tuberculosis,species,7
+2097,Mycoplasmoides genitalium,species,7
+2104,Mycoplasmoides pneumoniae,species,7
+34,Myxococcus xanthus,species,7
+487,Neisseria meningitidis,species,7
+881,Nitratidesulfovibrio vulgaris,species,7
+338192,Nitrosopumilus maritimus,species,7
+103690,Nostoc sp. PCC 7120 = FACHB-418,species,7
+837,Porphyromonas gingivalis,species,7
+1219,Prochlorococcus marinus,species,7
+287,Pseudomonas aeruginosa,species,7
+303,Pseudomonas putida,species,7
+2261,Pyrococcus furiosus,species,7
+782,Rickettsia prowazekii,species,7
+28901,Salmonella enterica,species,7
+623,Shigella flexneri,species,7
+382,Sinorhizobium meliloti,species,7
+1280,Staphylococcus aureus,species,7
+1313,Streptococcus pneumoniae,species,7
+1314,Streptococcus pyogenes,species,7
+1902,Streptomyces coelicolor,species,7
+2285,Sulfolobus acidocaldarius,species,7
+32046,Synechococcus elongatus,species,7
+1148,Synechocystis sp. PCC 6803,species,7
+2303,Thermoplasma acidophilum,species,7
+2336,Thermotoga maritima,species,7
+274,Thermus thermophilus,species,7
+160,Treponema pallidum,species,7
+666,Vibrio cholerae,species,7
+163164,Wolbachia endosymbiont of Drosophila melanogaster,species,7
+632,Yersinia pestis,species,7
