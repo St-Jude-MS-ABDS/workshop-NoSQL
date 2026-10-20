@@ -3,7 +3,7 @@
   "hostRequirements": {
     "cpus": 4
   },
-  "forwardPorts": [8000],
+  "forwardPorts": [8000, 27017, 7474, 7687],
   "portsAttributes": {
     "8000": {
         "visibility": "public"

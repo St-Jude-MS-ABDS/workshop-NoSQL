@@ -25,6 +25,7 @@ class preflight_class():
     def __init__(self):
         self.url = None
         self.mongo_uri = None
+        self.mongo_auth = {}  # username/password/authSource kwargs for MongoClient; empty means plain mode
     def _get_questions(self):
         # Load the question from the YAML file
         with open("question.yaml", "r") as file:
@@ -36,10 +37,21 @@ class preflight_class():
     def get_mongo_uri(self):
         # ask user to input MongoDB URI, with hidden input
         self.mongo_uri = getpass.getpass("Please enter your MongoDB URI: ")
+        # optional username/password authentication; skip it if the server has no auth
+        # or the credentials are already embedded in the URI
+        username = input("MongoDB username (press Enter to skip): ").strip()
+        if username:
+            self.mongo_auth = {"username": username, "password": getpass.getpass("MongoDB password: ")}
+            auth_source = input("Authentication database (press Enter for the driver default): ").strip()
+            if auth_source:
+                self.mongo_auth["authSource"] = auth_source
+    def make_client(self):
+        # passing the credentials as kwargs avoids URL-encoding special characters in the password
+        return MongoClient(self.mongo_uri, **self.mongo_auth)
     def _check_mongo(self):
-        # Check if the MongoDB URI is working
+        # Check if the MongoDB URI (and credentials, if any) is working
         try:
-            _client = MongoClient(self.mongo_uri)
+            _client = self.make_client()
             _client.admin.command('ping')
             questions = self._get_questions()
             print(questions)
@@ -48,7 +60,7 @@ class preflight_class():
             _client.close()
             print("MongoDB is connected successfully.")
         except Exception as e:
-            print("MongoDB is not connected, please check your connection string.")
+            print("MongoDB is not connected, please check your connection string and credentials.")
             raise e
 
     def get_web_url(self):
@@ -110,7 +122,7 @@ app.add_middleware(
 )
 
 # Connect to MongoDB Atlas
-client = MongoClient(preflight.mongo_uri)
+client = preflight.make_client()
 db = client[db_name]
 collection = db[collection_name]
 @app.post("/vote")

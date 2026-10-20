@@ -1,16 +1,37 @@
-neo4j==5.28.1
-pymongo==4.12.0
-matplotlib==3.10.3
-tqdm==4.66.4
-mongomock==4.3.0
-networkx==3.4.2
-fastapi==0.116.1
-uvicorn==0.35.0
-qrcode==8.2
-python-multipart==0.0.20
-pyyaml==6.0.2
-vcfpy==0.14.2
-dnspython==2.6.1
-pyfaidx==0.9.0
-python-dotenv==1.1.1
-neo4j_viz==0.2.5
+# =============================================================================
+#  Python packages for the whole NoSQL workshop series (lectures 24-27)
+#
+#  Install (inside a virtual environment, see SETUP.md):
+#      pip install -r requirements.txt
+#
+#  Tested with Python 3.10 - 3.13.
+# =============================================================================
+
+# --- Jupyter: the notebook environment you work in (all lectures) -------------
+jupyterlab==4.6.4
+ipykernel>=6.29            # lets Jupyter run your Python (installed with jupyterlab, pinned for clarity)
+
+# --- General data tools used by the workbooks (lectures 25 and 27) ------------
+pandas>=2.2,<3             # tables ("DataFrames") for reading CSV files and showing query results
+matplotlib==3.10.3         # plots (histograms, heat maps)
+scipy>=1.13                # hierarchical clustering of genomes (lecture 27)
+python-dotenv==1.1.1       # optional: read connection settings from a .env file
+
+# --- Lecture 25: MongoDB workshop ---------------------------------------------
+pymongo==4.12.0            # official MongoDB driver for Python
+dnspython==2.6.1           # needed by pymongo for "mongodb+srv://" (Atlas) connection strings
+vcfpy==0.14.2              # pure-Python VCF (variant call format) parser
+
+# --- Lectures 26-27: Neo4j workshops ------------------------------------------
+neo4j==5.28.1              # official Neo4j driver (talks to the database over the Bolt protocol)
+neo4j_viz==0.2.5           # interactive graph visualisation inside notebooks
+networkx==3.4.2            # small in-memory graphs for comparison and plotting
+tqdm==4.66.4               # progress bars while loading data
+
+# --- Lecture 24: the live poll web app (1-nosql-concept/poll) -----------------
+fastapi==0.116.1           # web framework
+uvicorn==0.35.0            # web server that runs the FastAPI app
+jinja2==3.1.6              # HTML templates
+python-multipart==0.0.20   # reads HTML form submissions
+pyyaml==6.0.2              # reads the poll questions from question.yaml
+qrcode==8.2                # prints the QR code students scan to join the poll
